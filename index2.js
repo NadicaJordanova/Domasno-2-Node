@@ -22,32 +22,12 @@ const studenti = [
   ];
 
   //? 1. Сите студенти од Скопје чие име завршува на а и имаат просек над 7, подредени по име (растечки).
-//   studenti.forEach(student => {
-//     if( student.ime.endsWith('a') && student.prosek > 7){
 
+console.log(" 1. _______________________________________")
+const sortiraniStudenti1 = studenti.filter((student) => student.ime.endsWith('a') && student.prosek > 7)
 
-
-//        const sortiraniStudenti = studenti.sort((a, b) => a.ime - b.ime)
-//        console.log(sortiraniStudenti)
-        
-//     }
-   
-//   });
-// const sortiraniStudenti = studenti.filter((student) => student.ime.endsWith('a') && student.prosek > 7)
-// console.log(sortiraniStudenti)
-
-// nizaodDolzini = []
-// sortiraniStudenti.forEach(student => {
-    
-//   const dolzinaNaIme =  student.ime.length 
-//   console.log(dolzinaNaIme)
-//   nizaodDolzini.push(dolzinaNaIme)
-  
-// });
-
-// console.log(nizaodDolzini)
-// nizaodDolzini.sort((a, b) => a - b )
-// console.log(nizaodDolzini)
+       sortiraniStudenti1.sort((a, b) => a.ime.length - b.ime.length).reverse
+       console.log(sortiraniStudenti1)
 
 
 //? 2. Сите студенти кои имаат просек над 9 и не се од Скопје, подредени по просек опаѓачки.
