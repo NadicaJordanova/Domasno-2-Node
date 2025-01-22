@@ -8,6 +8,7 @@
 //? 8. Да се креира нов array каде што студентите од Охрид и Куманово каде што оценките со просек се за 1 поголем(Динамички)
 
 
+
 const studenti = [
     { ime: "Pero", prosek: 7.5, grad: "Berovo" },
     { ime: "Petko", prosek: 9.9, grad: "Skopje" },
@@ -24,10 +25,10 @@ const studenti = [
   //? 1. Сите студенти од Скопје чие име завршува на а и имаат просек над 7, подредени по име (растечки).
 
 console.log(" 1. _______________________________________")
-const sortiraniStudenti1 = studenti.filter((student) => student.ime.endsWith('a') && student.prosek > 7)
+const sortiraniStudenti1 = studenti.filter((student) => student.ime.endsWith('a') && student.prosek > 7).sort((a, b) => a.ime.length - b.ime.length).reverse
+console.log(sortiraniStudenti1)
 
-       sortiraniStudenti1.sort((a, b) => a.ime.length - b.ime.length).reverse
-       console.log(sortiraniStudenti1)
+      
 
 
 //? 2. Сите студенти кои имаат просек над 9 и не се од Скопје, подредени по просек опаѓачки.
@@ -71,7 +72,7 @@ studenti.forEach((student) => {
 var suma = 0
 for (let i = 0; i < nizaProsekKumanovo.length; i++) {
    suma += nizaProsekKumanovo[i];
-    // ako tuka stavam return suma ne funkcionira, a koga go nema funkcionira?
+  
   }
   console.log(suma)
   
@@ -126,7 +127,6 @@ studenti.forEach((student) => {
         return noviStudenti
     }
 })
-
 
 
 
